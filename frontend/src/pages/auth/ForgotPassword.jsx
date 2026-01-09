@@ -15,7 +15,7 @@ const ForgotPassword = () => {
     setBtnLoading(true);
     try {
       const { data } = await axios.post(`${server}/api/user/forgot`, { email });
-
+      console.log(data)
       toast.success(data.message);
       navigate("/login");
       setBtnLoading(false);
